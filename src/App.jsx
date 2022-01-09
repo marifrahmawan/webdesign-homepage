@@ -1,8 +1,12 @@
 import { Fragment } from 'react/cjs/react.production.min';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+import Contact from './components/Contact';
 import Feature from './components/Feature';
+import Footer from './components/Footer';
 import Intro from './components/Intro';
 import Navbar from './components/Navbar';
+import Price from './components/Price';
+import Service from './components/Service';
 
 const Container = styled.div`
   height: 100vh;
@@ -10,26 +14,37 @@ const Container = styled.div`
   position: relative;
 `;
 
-const IntroShape = styled.div`
+const Shape = css`
   height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -2;
+`;
+
+const IntroShape = styled.div`
+  ${Shape}
   clip-path: polygon(74% 0, 100% 0, 100% 100%, 55% 100%);
   background-color: crimson;
 `;
 
 const FeatureShape = styled.div`
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  clip-path: polygon(55% 0, 0 0, 0 100%, 26% 100%);
-  background-color: #ff97af;
+  ${Shape}
+  clip-path: polygon(0 0, 55% 0, 33% 100%, 0 100%);
+  background-color: #4ea3ff;
+`;
+
+const ServiceShape = styled.div`
+  ${Shape}
+  clip-path: polygon(0 0, 33% 0, 33% 100%, 0 100%);
+  background-color: #f88497;
+`;
+
+const PriceShape = styled.div`
+  ${Shape}
+  clip-path: polygon(33% 0, 100% 0, 100% 100%, 74% 100%);
+  background-color: crimson;
 `;
 
 const App = () => {
@@ -40,9 +55,25 @@ const App = () => {
         <Intro />
         <IntroShape />
       </Container>
+
       <Container>
         <Feature />
         <FeatureShape />
+      </Container>
+
+      <Container>
+        <Service />
+        <ServiceShape />
+      </Container>
+
+      <Container>
+        <Price />
+        <PriceShape />
+      </Container>
+
+      <Container>
+        <Contact />
+        <Footer />
       </Container>
     </Fragment>
   );

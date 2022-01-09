@@ -67,7 +67,8 @@ const Right = styled.div`
 `;
 
 const Image = styled.img`
-  height: 100vh;
+  height: 100%;
+  object-fit: cover;
 `;
 
 const Intro = () => {
@@ -82,7 +83,7 @@ const Intro = () => {
         <Info>
           <Button>START A PROJECT</Button>
           <Contact>
-            <Phone>Call Us (+62) 823 2445 7662</Phone>
+            <Phone>Call Us (+62) 123 4567 8910</Phone>
             <ContactText>For any question or concern.</ContactText>
           </Contact>
         </Info>

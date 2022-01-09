@@ -28,17 +28,20 @@ const Right = styled.div`
 const Title = styled.span`
   font-size: 70px;
 `;
+
 const SubTitle = styled.span`
   font-size: 24px;
   font-style: italic;
   margin-top: 30px;
   color: #333;
 `;
-const Description = styled.p`
+
+const Desc = styled.p`
   font-size: 20px;
   color: #777;
   margin-top: 30px;
 `;
+
 const Button = styled.button`
   width: 150px;
   border: none;
@@ -63,14 +66,14 @@ const Feature = () => {
           <b>good</b> business
         </Title>
         <SubTitle>We know that design means good business.</SubTitle>
-        <Description>
+        <Desc>
           We help out clients succeed by creating brand identities, digital
           experience, and print materials that comminicate clearly, achieve
           marketing goals and look fantastic.
-        </Description>
-        <Description>
+        </Desc>
+        <Desc>
           We care your business and guarantee you to achieve marketing goals.
-        </Description>
+        </Desc>
         <Button>Learn More</Button>
       </Right>
       <AnimatedShapes />

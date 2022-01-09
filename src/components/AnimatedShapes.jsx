@@ -27,14 +27,14 @@ const Circle = styled.div`
   background-color: #ff97af;
   opacity: 0.5;
   position: absolute;
-  top: 200px;
-  left: -100px;
+  top: -60px;
+  right: 50%;
   z-index: -1;
   animation: circle 25s linear alternate infinite;
 
   @keyframes circle {
     to {
-      transform: translate(100vw, -100vh);
+      transform: translate(100vh, 50vw);
     }
   }
 `;
@@ -57,12 +57,34 @@ const Rect = styled.div`
   }
 `;
 
+const Tri = styled.div`
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 40px 80px 40px;
+  border-color: transparent transparent #007bff transparent;
+  position: absolute;
+  bottom: 0px;
+  right: 70%;
+  z-index: -1;
+  opacity: 0.5;
+
+  animation: tri 25s linear alternate infinite;
+
+  @keyframes tri {
+    to {
+      transform: translate(50vw, -100vh);
+    }
+  }
+`;
+
 const AnimatedShapes = () => {
   return (
     <Fragment>
       <Square />
       <Circle />
       <Rect />
+      <Tri />
     </Fragment>
   );
 };

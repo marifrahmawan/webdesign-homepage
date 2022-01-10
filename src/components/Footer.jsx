@@ -6,8 +6,6 @@ const Container = styled.div`
   width: 100%;
   background-color: crimson;
   color: lightgrey;
-  /* display: flex;
-  align-items: center; */
 `;
 
 const Wrapper = styled.div`
@@ -27,10 +25,19 @@ const List = styled.ul`
 
 const ListItem = styled.li`
   margin-right: 30px;
+
+  @media only screen and (max-width: 480px) {
+    margin-right: 10px;
+    font-size: 14px;
+  }
 `;
 
 const Copyright = styled.span`
   padding: 20px;
+
+  @media only screen and (max-width: 480px) {
+    font-size: 14px;
+  }
 `;
 
 const Footer = () => {

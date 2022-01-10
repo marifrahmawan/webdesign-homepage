@@ -5,10 +5,21 @@ import AnimatedShapes from './AnimatedShapes';
 
 const Container = styled.div`
   display: flex;
+
+  @media only screen and (max-width: 480px) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+  }
 `;
 
 const Left = styled.div`
   width: 50%;
+
+  @media only screen and (max-width: 480px) {
+    display: none;
+  }
 `;
 
 const Image = styled.img`
@@ -23,10 +34,20 @@ const Right = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media only screen and (max-width: 480px) {
+    align-items: center;
+    height: 100%;
+    width: 100%;
+  }
 `;
 
 const Title = styled.span`
   font-size: 70px;
+
+  @media only screen and (max-width: 480px) {
+    font-size: 50px;
+  }
 `;
 
 const SubTitle = styled.span`
@@ -38,8 +59,9 @@ const SubTitle = styled.span`
 
 const Desc = styled.p`
   font-size: 20px;
-  color: #777;
+  color: #5f5f5f;
   margin-top: 30px;
+  text-align: justify;
 `;
 
 const Button = styled.button`
@@ -50,7 +72,7 @@ const Button = styled.button`
   color: white;
   border-radius: 10px;
   font-size: 20px;
-  margin-top: 20px;
+  margin-top: 50px;
   cursor: pointer;
 `;
 
